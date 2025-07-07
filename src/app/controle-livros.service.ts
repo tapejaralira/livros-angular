@@ -8,7 +8,6 @@ export class ControleLivrosService {
   private livros: Array<Livro>;
 
   constructor() {
-    // Inicializando com dados de exemplo como pedido no trabalho
     this.livros = [
       new Livro(
         1,

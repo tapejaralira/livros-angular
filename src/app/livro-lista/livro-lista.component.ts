@@ -14,25 +14,25 @@ import { ControleLivrosService } from '../controle-livros.service';
   styleUrl: './livro-lista.component.css'
 })
 export class LivroListaComponent implements OnInit {
-  public editoras: Array<Editora> = []; // [cite: 47]
-  public livros: Array<Livro> = []; // [cite: 48]
+  public editoras: Array<Editora> = [];
+  public livros: Array<Livro> = [];
 
   constructor(
-    private servEditora: ControleEditoraService, // 
-    private servLivros: ControleLivrosService  // 
+    private servEditora: ControleEditoraService,
+    private servLivros: ControleLivrosService
   ) {}
 
   ngOnInit(): void {
-    this.editoras = this.servEditora.getEditoras(); // 
-    this.livros = this.servLivros.obterLivros(); // 
+    this.editoras = this.servEditora.getEditoras();
+    this.livros = this.servLivros.obterLivros();
   }
 
   excluir = (codigo: number): void => {
-    this.servLivros.excluir(codigo); // 
-    this.livros = this.servLivros.obterLivros(); // 
+    this.servLivros.excluir(codigo);
+    this.livros = this.servLivros.obterLivros();
   };
 
   obterNome = (codEditora: number): string => {
-    return this.servEditora.getNomeEditora(codEditora); // 
+    return this.servEditora.getNomeEditora(codEditora);
   };
 }

@@ -25,11 +25,10 @@ export class LivroDadosComponent implements OnInit {
     private servLivros: ControleLivrosService,
     private router: Router
   ) {
-    this.livro = new Livro(0, 0, '', '', []); // Instanciação padrão pedida no guia 
+    this.livro = new Livro(0, 0, '', '', []);
   }
 
   ngOnInit(): void {
-    // No método ngOnInit, preencher o vetor editoras 
     this.editoras = this.servEditora.getEditoras();
   }
 

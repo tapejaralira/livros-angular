@@ -1,6 +1,5 @@
 import { Routes } from '@angular/router';
 
-// Importar os componentes que serão usados nas rotas
 import { LivroListaComponent } from './livro-lista/livro-lista.component';
 import { LivroDadosComponent } from './livro-dados/livro-dados.component';
 
